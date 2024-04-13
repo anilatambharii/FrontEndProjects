@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .profile-name {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .favorite-list {
+            list-style: none;
+            padding: 0;
+        }
+        .favorite-list li {
+            margin-bottom: 10px;
+        }
+        .favorite-list li::before {
+            content: "•";
+            margin-right: 10px;
+        }
+        .favorite-films li::before {
+            content: counter(films) ".";
+            counter-increment: films;
+            margin-right: 10px;
+        }
+        .meta-button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-icon">J</div>
+        <div class="profile-name">Jane</div>
+        <div class="favorite-music">
+            <h3>Favorite Music Artists</h3>
+            <ul class="favorite-list">
+                <li>Metallica</li>
+                <li>Bob Marley</li>
+                <li>Madonna</li>
+                <li>The Beatles</li>
+                <li>Pink Floyd</li>
+            </ul>
+        </div>
+        <div class="favorite-films">
+            <h3>Favorite Films</h3>
+            <ol class="favorite-list">
+                <li>Pulp Fiction</li>
+                <li>The Godfather</li>
+                <li>The Lord of the Rings</li>
+                <li>Iron Man</li>
+                <li>Inception</li>
+            </ol>
+        </div>
+        <button class="meta-button">My Meta Profile</button>
+    </div>
+</body>
+</html>
